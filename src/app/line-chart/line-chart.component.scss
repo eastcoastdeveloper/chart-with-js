@@ -1,0 +1,209 @@
+#basic-line-chart {
+  margin: 0 20px;
+}
+
+.project-wrapper {
+  position: relative;
+  border: 1px solid #01303f;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  max-width: 500px;
+}
+
+/* Graph Warpper */
+.graph {
+  width: 1000px;
+  height: 100%;
+  position: relative;
+  background-color: white;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    left: 0;
+  }
+}
+
+/* Project Wrapper */
+.main-content {
+  height: 250px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: 23px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Position Y Axis Label */
+.yLabel {
+  position: absolute;
+  width: 250px;
+  height: 25px;
+  left: 10px;
+  top: 50%;
+  font: normal 12px sans-serif;
+  background-color: white;
+  text-align: center;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  line-height: 30px;
+}
+
+/* Button Wrapper */
+.options {
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  right: 8px;
+
+  /* Arrow */
+  .indicator {
+    width: 100%;
+    height: 100%;
+
+    >div {
+      position: absolute;
+      left: 3px;
+      display: block;
+      width: calc(100% - 6px);
+      top: -6px;
+      height: 0;
+      box-shadow: 0 10px 0 1px #69737d, 0 15px 0 1px #69737d, 0 20px 0 1px #69737d;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+/* Options Menu */
+.options-menu {
+  position: absolute;
+  color: #02577a;
+  top: 5px;
+  width: 150px;
+  border-radius: 3px;
+  right: 5px;
+  background-color: white !important;
+
+  >ul {
+    padding: 0;
+    margin: 10px 0 10px 10px;
+
+    >li {
+      list-style-type: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    >li:nth-child(2) {
+      margin: 15px 0;
+    }
+
+    >li:last-child {
+      margin-top: 15px;
+    }
+
+    .grid {
+      overflow: auto;
+
+      div:first-child:not(.line-options) {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #02577a;
+        border-radius: 3px;
+        float: left;
+      }
+
+      >p {
+        margin: 0 0 0 10px;
+        font: normal 12px sans-serif;
+        float: left;
+      }
+
+      .checkmark {
+        position: absolute;
+        font-size: 13px;
+        top: -1px;
+        left: 2px;
+      }
+
+      .line-options {
+        float: left;
+
+        >p {
+          margin: 0;
+          font: normal 12px sans-serif;
+        }
+
+        ul {
+          display: grid;
+          grid-template-areas:
+            "itemOne itemTwo"
+            "itemThree itemFour";
+          grid-gap: 8px;
+          margin-top: 7px;
+          margin-bottom: 5px;
+          width: 100px;
+          padding-left: 25px;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: 10px auto;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+/* Transparent BG */
+.transparent-bg {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 6px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+/* X Axis Grid */
+.xGrid {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::ng-deep .xLines {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Y Axis Container */
+.yAxis {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font: normal 12px sans-serif;
+  display: flex;
+  text-align: center;
+}
+
+.displayNone {
+  display: none;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}

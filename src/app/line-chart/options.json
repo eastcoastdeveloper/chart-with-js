@@ -1,0 +1,35 @@
+{
+    "menuOptions": [
+        {
+            "item": "Y Axis",
+            "checkMark": true
+        },
+        {
+            "item": "X Axis Labels",
+            "checkMark": true
+        },
+        {
+            "item": "X Axis Grid Lines",
+            "checkMark": true
+        },{
+            "lineOptions": [
+                {
+                    "value": 7,
+                    "percent": 14.28
+                },
+                {
+                    "value": 10,
+                    "percent": 10
+                },
+                {
+                    "value": 15,
+                    "percent": 6.67
+                },
+                {
+                    "value": 20,
+                    "percent": 5
+                }
+            ]
+        }
+    ]
+}

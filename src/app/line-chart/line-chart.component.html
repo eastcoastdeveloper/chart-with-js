@@ -1,0 +1,66 @@
+<div id="basic-line-chart">
+  <div class="project-wrapper">
+    <div class="main-content" [ngClass]="{ 'ml-0': !yLabelVisible }">
+      <div class="graph">
+        <div
+          #xGrid
+          class="xGrid"
+          [ngClass]="{ displayNone: !xGridVisible }"
+        ></div>
+        <canvas #lineChart id="lineChart"></canvas>
+        <div #yAxis class="yAxis"></div>
+      </div>
+    </div>
+    <div class="yLabel" [ngClass]="{ displayNone: !yLabelVisible }">
+      Y Label
+    </div>
+    <div class="transparent-bg" *ngIf="optionsPanel"></div>
+    <div class="options-menu" *ngIf="optionsPanel">
+      <ul>
+        <li
+          *ngFor="let options of optionsArray | slice: 0:3; let i = index"
+          (click)="selectItem(i)"
+        >
+          <div class="grid">
+            <div></div>
+            <p>{{ options.item }}</p>
+            <div *ngIf="optionsArray[i].checkMark" class="checkmark">
+              &#10003;
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="grid" *ngIf="xGridVisible">
+            <div class="line-options">
+              <p>Grid Line Count</p>
+              <ul>
+                <li
+                  class="grid"
+                  *ngFor="
+                    let xLines of optionsArray[3].lineOptions;
+                    let j = index
+                  "
+                  (click)="changeLineCount(xLines, $event)"
+                >
+                  <div class="faux-checkbox"></div>
+                  <p>{{ xLines.value }}</p>
+                  <div
+                    *ngIf="xLines.value == selectedCheckbox"
+                    class="checkmark"
+                  >
+                    &#10003;
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="options">
+      <div class="indicator" (click)="toggleOptions()">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
