@@ -54,3 +54,9 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 768px){
+  .website, footer {
+    display: none;
+  }
+}
