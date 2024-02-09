@@ -1,35 +1,36 @@
 {
-    "menuOptions": [
+  "menuOptions": [
+    {
+      "item": "Y Axis",
+      "checkMark": true
+    },
+    {
+      "item": "X Axis Labels",
+      "checkMark": true
+    },
+    {
+      "item": "X Axis Grid Lines",
+      "checkMark": true
+    },
+    {
+      "lineOptions": [
         {
-            "item": "Y Axis",
-            "checkMark": true
+          "value": 7,
+          "percent": 14.28
         },
         {
-            "item": "X Axis Labels",
-            "checkMark": true
+          "value": 10,
+          "percent": 10
         },
         {
-            "item": "X Axis Grid Lines",
-            "checkMark": true
-        },{
-            "lineOptions": [
-                {
-                    "value": 7,
-                    "percent": 14.28
-                },
-                {
-                    "value": 10,
-                    "percent": 10
-                },
-                {
-                    "value": 15,
-                    "percent": 6.67
-                },
-                {
-                    "value": 20,
-                    "percent": 5
-                }
-            ]
+          "value": 15,
+          "percent": 6.67
+        },
+        {
+          "value": 20,
+          "percent": 5
         }
-    ]
+      ]
+    }
+  ]
 }
