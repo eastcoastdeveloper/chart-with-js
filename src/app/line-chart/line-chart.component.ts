@@ -16,8 +16,6 @@ export class BasicLineChartComponent implements OnInit {
   xGridVisible: boolean = true; // X Axis Lines
   yLabelVisible: boolean = true; // Y Axis Label
   selectedCheckbox: any; // InnerHTML of Selected Checkbox in Legend
-  date: any = new Date();
-  month: any = this.date.getMonth();
   months: any = [
     'Jan',
     'Feb',
@@ -33,7 +31,6 @@ export class BasicLineChartComponent implements OnInit {
     'Dec',
   ];
   xAxisVisible: boolean = true;
-  currentMonth: any = this.months[this.month];
 
   @ViewChild('yAxis', { static: false }) yAxis: ElementRef;
   @ViewChild('xGrid', { static: false }) xGrid: ElementRef;
